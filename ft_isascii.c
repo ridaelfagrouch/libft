@@ -14,8 +14,9 @@
 
 int	ft_isascii(int c)
 {
-	if (!((c >= 0) && (c < '0*7f')))
+	if (!((c >= 0) && (c < 128)))
 		return (0);
 	else
 		return (1);
+	return (0);
 }
