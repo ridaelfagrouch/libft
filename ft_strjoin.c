@@ -31,8 +31,8 @@ static char	*ft_create_str(char const *s1, char const *s2, int len)
 
 	str = NULL;
 	i = 0;
-	str = (char *)malloc(sizeof(char) * len);
-	if (str == NULL)
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (!str)
 		return (0);
 	return (str);
 }
@@ -54,9 +54,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		i++;
 	}
 	while (s2[j])
-	{
 		str[i++] = s2[j++];
-	}
 	str[i] = '\0';
 	return (str);
 }

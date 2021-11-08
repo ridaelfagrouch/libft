@@ -6,7 +6,7 @@
 /*   By: rel-fagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 17:49:52 by rel-fagr          #+#    #+#             */
-/*   Updated: 2021/11/07 11:56:18 by rel-fagr         ###   ########.fr       */
+/*   Updated: 2021/11/08 12:00:33 by rel-fagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ static void	ft_trim(char *s1, char *set)
 		if (s1[ft_len(s1) - 1 ] == set[i])
 		{
 			s1[ft_len(s1) - 1] = '\0';
+			i = 0;
 			continue ;
 		}
 		i++;
@@ -71,13 +72,15 @@ char	*ft_strtrim(const char *s1, const char *set)
 	fin_tab = ft_strdup(s1_dup);
 	free (s1_dup);
 	free (set_dup);
+	if (!fin_tab)
+		return (0);
 	return (fin_tab);
 }
 /*
 int    main(void)
 {
     printf("%s\n", ft_strtrim("   xxxtripouille", " x"));
-    printf("%s\n", ft_strtrim("tripouille   xxx", "i"));
+    printf("%s\n", ft_strtrim("tripouille   xxx", " x"));
     printf("%s\n", ft_strtrim("   xxxtripouille   xxx", " x"));
     printf("%s\n", ft_strtrim("   xxx   xxx", " x"));
     printf("%s\n", ft_strtrim("", "123"));

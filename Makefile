@@ -11,7 +11,7 @@ OBJS := $(SRCS:%.c=%.o)
 
 # target for linking compiled .o files into one program
 $(NAME) : $(OBJS)
-	ar rcs $(NAME) $^
+	ar rcs $(NAME) $^	
 
 #root target calling other targets
 all: $(NAME)

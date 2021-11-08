@@ -14,17 +14,15 @@
 
 static void	*ft_else(char *dest, char *src, size_t n)
 {
-	int	i;
+	int i;
 
-	i = 0;
-	while (--n >= 0)
+	i = n - 1;
+	while (i >= 0)
 	{
-		dest[n] = src[n];
-		if (n == 0)
-		{
-			dest[0] = src[0];
-			break ;
-		}
+		dest[i] = src[i];
+		if(i == 0)
+			break;
+		i--;
 	}
 	return (dest);
 }

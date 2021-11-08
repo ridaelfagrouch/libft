@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <string.h>
+//#include <stdio.h>
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -18,21 +20,21 @@ char	*ft_strchr(const char *s, int c)
 	char	*str;
 	char	x;
 
-	x = (char) c;
 	i = 0;
+	x = (char) c;
 	str = (char *) s;
-	while (str[i])
+	while (str[i] >= 0)
 	{
-		if (x == 0)
-			return (str + ft_strlen(str));
-		else if (str[i] == x)
+		if (str[i] == x)
 			return (&str[i]);
+		else if (str[i] == 0)
+			break ;
 		i++;
 	}
 	return (0);
 }
 /*int main()
 {
-	char str[] = "hello bro";
-	printf("%s", strchr(str, 'l'));
+	char str[] = "";
+	printf("%s", ft_strchr(str, 0));
 }*/

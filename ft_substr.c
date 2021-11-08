@@ -6,28 +6,54 @@
 /*   By: rel-fagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 14:32:09 by rel-fagr          #+#    #+#             */
-/*   Updated: 2021/11/07 11:59:51 by rel-fagr         ###   ########.fr       */
+/*   Updated: 2021/11/08 14:21:45 by rel-fagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static char	*if_star(void)
+{
+	char	*ptr;
+
+	ptr = (void *)malloc(sizeof(char));
+	ptr[0] = '\0';
+	return (ptr);
+}
+
+static size_t	new_lenght(char *str, size_t len, unsigned int new_start)
+{
+	int i;
+	i = 0;
+	while (str[new_start] &&  i < len)
+	{
+		i++;
+		new_start++;
+	}
+	return (i);
+}
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	lenght;
 	char			*ptr;
 	char			*str;
+	size_t			i;
+	size_t			lenght;
+	unsigned int	new_start;
 
 	i = 0;
-	j = (unsigned int) len;
+	ptr = NULL;
 	str = (char *) s;
-	lenght = start + j;
-	ptr = (void *)malloc(lenght * sizeof(char));
-	while ((start < lenght) && (str[start] != '\0'))
+	lenght = 0;
+	new_start = start;
+	if (start > ft_strlen(s))
+		return (if_star());
+	ptr = (void *)malloc((new_lenght(str, len, new_start) + 1) * sizeof(char));
+	if (!ptr)
+		return (0);
+	while ((i < len) && (str[start] != '\0'))
 		ptr[i++] = str[start++];
-	ptr[start + 1] = '\0';
+	ptr[i] = '\0';
 	return (ptr);
 }
 /*
