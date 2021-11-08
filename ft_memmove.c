@@ -6,7 +6,7 @@
 /*   By: rel-fagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 16:06:28 by rel-fagr          #+#    #+#             */
-/*   Updated: 2021/11/07 12:12:41 by rel-fagr         ###   ########.fr       */
+/*   Updated: 2021/11/08 21:24:12 by rel-fagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 static void	*ft_else(char *dest, char *src, size_t n)
 {
-	int i;
+	int	i;
 
 	i = n - 1;
 	while (i >= 0)
 	{
 		dest[i] = src[i];
-		if(i == 0)
-			break;
+		if (i == 0)
+			break ;
 		i--;
 	}
 	return (dest);

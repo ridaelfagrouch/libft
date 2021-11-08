@@ -6,7 +6,7 @@
 /*   By: rel-fagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 14:32:09 by rel-fagr          #+#    #+#             */
-/*   Updated: 2021/11/08 14:21:45 by rel-fagr         ###   ########.fr       */
+/*   Updated: 2021/11/08 21:25:37 by rel-fagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,10 @@ static char	*if_star(void)
 
 static size_t	new_lenght(char *str, size_t len, unsigned int new_start)
 {
-	int i;
+	int	i;
+
 	i = 0;
-	while (str[new_start] &&  i < len)
+	while (str[new_start] && i < len)
 	{
 		i++;
 		new_start++;
