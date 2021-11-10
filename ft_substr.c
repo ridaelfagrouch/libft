@@ -39,13 +39,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char			*ptr;
 	char			*str;
 	size_t			i;
-	size_t			lenght;
 	unsigned int	new_start;
 
 	i = 0;
 	ptr = NULL;
 	str = (char *) s;
-	lenght = 0;
 	new_start = start;
 	if (start > ft_strlen(s))
 		return (if_star());
