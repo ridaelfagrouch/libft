@@ -6,7 +6,7 @@
 /*   By: rel-fagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 14:32:09 by rel-fagr          #+#    #+#             */
-/*   Updated: 2021/11/08 21:25:37 by rel-fagr         ###   ########.fr       */
+/*   Updated: 2021/11/11 01:31:56 by rel-fagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,10 @@ static char	*if_star(void)
 {
 	char	*ptr;
 
+	ptr = NULL;
 	ptr = (void *)malloc(sizeof(char));
+	if (!ptr)
+		return (0);
 	ptr[0] = '\0';
 	return (ptr);
 }
@@ -43,6 +46,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	ptr = NULL;
+	if (!s)
+		return (NULL);
 	str = (char *) s;
 	new_start = start;
 	if (start > ft_strlen(s))

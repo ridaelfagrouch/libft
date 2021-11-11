@@ -6,23 +6,11 @@
 /*   By: rel-fagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 17:27:19 by rel-fagr          #+#    #+#             */
-/*   Updated: 2021/11/07 11:57:51 by rel-fagr         ###   ########.fr       */
+/*   Updated: 2021/11/11 01:28:54 by rel-fagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	ft_lenlen(char const *str)
-{
-	int		i;
-
-	i = 0;
-	while (str[i])
-	{
-		i++;
-	}
-	return (i);
-}
 
 static char	*ft_create_str(char const *s1, char const *s2, int len)
 {
@@ -44,8 +32,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		len;
 	char	*str;
 
-	len = ft_lenlen(s1) + ft_lenlen(s2);
+	if (!s1 || !s2)
+		return (0);
+	len = ft_strlen(s1) + ft_strlen(s2);
 	str = ft_create_str(s1, s2, len);
+	if (!str)
+		return (0);
 	i = 0;
 	j = 0;
 	while (s1[i])

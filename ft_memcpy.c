@@ -6,7 +6,7 @@
 /*   By: rel-fagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 10:13:35 by rel-fagr          #+#    #+#             */
-/*   Updated: 2021/11/07 12:24:57 by rel-fagr         ###   ########.fr       */
+/*   Updated: 2021/11/11 01:25:54 by rel-fagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	int		i;
-	char	*ptr;
-	char	*str;
+	int				i;
+	unsigned char	*ptr;
+	unsigned char	*str;
 
 	i = 0;
-	ptr = (char *) dest;
-	str = (char *) src;
+	ptr = (unsigned char *) dest;
+	str = (unsigned char *) src;
+	if (str == 0 && ptr == 0)
+		return (0);
 	while (i < n)
 	{
 		ptr[i] = str[i];

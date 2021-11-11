@@ -36,6 +36,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	i = 0;
 	ptr = (char *) dest;
 	str = (char *) src;
+	if (ptr == 0 && str == 0)
+		return (0);
 	if (ptr < str)
 	{
 		while (n-- > 0)

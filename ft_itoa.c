@@ -1,44 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rel-fagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 12:27:21 by rel-fagr          #+#    #+#             */
-/*   Updated: 2021/11/07 12:15:12 by rel-fagr         ###   ########.fr       */
+/*   Created: 2021/11/10 18:57:32 by rel-fagr          #+#    #+#             */
+/*   Updated: 2021/11/10 18:57:38 by rel-fagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_len(const char *str)
+char *ft_itoa(int n)
 {
-	int	len;
+    char *ptr;
+    int count;
 
-	len = 0;
-	while (str[len])
-		len++;
-	return (len);
-}
-
-char	*ft_strdup(const char *str)
-{
-	char	*res;
-	int		len;
-	int		i;
-
-	res = NULL;
-	i = 0;
-	len = ft_len(str);
-	res = (char *)malloc(sizeof(char) * (len + 1));
-	if (!res)
-		return (NULL);
-	while (str[i])
+    count = 0;
+   if (n < 10 && n >= 0)
 	{
-		res[i] = str[i];
-		i++;
+		ptr[0] = n;
+        ptr[1] = '\0';
 	}
-	res[i] = '\0';
-	return (res);
+    else if (n >= 10)
+	{
+        count++;
+		ft_itoa(n % 10);
+	}
+    count++;
+
+
+
 }

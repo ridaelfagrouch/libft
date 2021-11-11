@@ -6,7 +6,7 @@
 /*   By: rel-fagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 17:49:52 by rel-fagr          #+#    #+#             */
-/*   Updated: 2021/11/08 12:00:33 by rel-fagr         ###   ########.fr       */
+/*   Updated: 2021/11/11 01:30:50 by rel-fagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ static void	ft_remouv(char *s1)
 static void	ft_trim(char *s1, char *set)
 {
 	int	i;
+	int	j;
 
 	i = 0;
 	while (set[i])
@@ -50,10 +51,12 @@ static void	ft_trim(char *s1, char *set)
 			i = 0;
 			continue ;
 		}
-		if (s1[ft_len(s1) - 1 ] == set[i])
+		j = ft_len(s1) - 1;
+		if (s1[j] == set[i])
 		{
-			s1[ft_len(s1) - 1] = '\0';
+			s1[j] = '\0';
 			i = 0;
+			j--;
 			continue ;
 		}
 		i++;
@@ -66,8 +69,17 @@ char	*ft_strtrim(const char *s1, const char *set)
 	char	*set_dup;
 	char	*fin_tab;
 
+	if (!s1 || !set)
+		return (NULL);
 	s1_dup = ft_strdup(s1);
+	if (!s1_dup)
+		return (NULL);
 	set_dup = ft_strdup(set);
+	if (!set_dup)
+	{
+		free(s1_dup);
+		return (NULL);
+	}
 	ft_trim(s1_dup, set_dup);
 	fin_tab = ft_strdup(s1_dup);
 	free (s1_dup);

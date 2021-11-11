@@ -6,7 +6,7 @@
 /*   By: rel-fagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 14:35:41 by rel-fagr          #+#    #+#             */
-/*   Updated: 2021/11/10 17:13:37 by rel-fagr         ###   ########.fr       */
+/*   Updated: 2021/11/11 01:28:11 by rel-fagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -66,14 +66,21 @@ char	**ft_split(char const *s, char c)
 	int		count;
 
 	to_tab[0] = c;
+	result = NULL;
 	to_tab[1] = 0;
+	if (!s)
+		return (NULL);
 	tmp = ft_strtrim(s, to_tab);
+	if (!tmp)
+		return (NULL);
 	tmp1 = tmp;
 	result = 0;
 	count = str_row(tmp, c);
 	if (*tmp1)
 		count++;
 	result = (char **)malloc(sizeof(char *) * (count + 1));
+	if (!result)
+		return (0);
 	result[count] = NULL;
 	return (ft_creat(tmp1, result, c, count));
 }
