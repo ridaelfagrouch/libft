@@ -6,13 +6,13 @@
 /*   By: rel-fagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 12:00:49 by rel-fagr          #+#    #+#             */
-/*   Updated: 2021/11/11 01:34:06 by rel-fagr         ###   ########.fr       */
+/*   Updated: 2021/11/11 15:00:05 by rel-fagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	wite_space(const char *str, int *i)
+static void	wite_space(const char *str, unsigned int *i)
 {
 	while ((str[*i] == ' ') || (str[*i] == '\r')
 		|| (str[*i] == '\n') || (str[*i] == '\t')
@@ -24,10 +24,10 @@ static void	wite_space(const char *str, int *i)
 
 int	ft_atoi(const char *str)
 {
-	char		*src;
-	int			i;
-	int			sign;
-	long int	k;
+	char			*src;
+	unsigned int	i;
+	int				sign;
+	int			k;
 
 	i = 0;
 	sign = 1;
