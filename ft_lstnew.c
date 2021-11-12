@@ -14,9 +14,9 @@
 
 t_list  *ft_lstnew(void *content)
 {
-    struct s_list *root;
+    t_list *root;
 
-    root = (struct s_list *)malloc(sizeof(struct s_list));
+    root = (t_list *)malloc(sizeof(t_list));
     if(!root)
         return(0);
     root -> content = content;
