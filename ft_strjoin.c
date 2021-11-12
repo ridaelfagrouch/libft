@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static char	*ft_create_str(char const *s1, char const *s2, int len)
+static char	*ft_create_str(int len)
 {
 	char	*str;
 	int		i;
@@ -35,7 +35,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!s1 || !s2)
 		return (0);
 	len = ft_strlen(s1) + ft_strlen(s2);
-	str = ft_create_str(s1, s2, len);
+	str = ft_create_str(len);
 	if (!str)
 		return (0);
 	i = 0;

@@ -26,7 +26,7 @@ static char	*if_star(void)
 
 static size_t	new_lenght(char *str, size_t len, unsigned int new_start)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[new_start] && i < len)
