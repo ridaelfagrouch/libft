@@ -6,17 +6,17 @@
 /*   By: rel-fagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 16:22:20 by rel-fagr          #+#    #+#             */
-/*   Updated: 2021/11/12 16:22:23 by rel-fagr         ###   ########.fr       */
+/*   Updated: 2021/11/14 18:07:59 by rel-fagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list  *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-    if (!lst)
-        return (0);
-    while (lst -> next != NULL)
-        lst = lst -> next;
-    return (lst);
+	if (!lst)
+		return (NULL);
+	while (lst -> next != NULL)
+		lst = lst -> next;
+	return (lst);
 }

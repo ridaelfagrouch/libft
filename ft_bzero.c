@@ -6,7 +6,7 @@
 /*   By: rel-fagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 09:51:17 by rel-fagr          #+#    #+#             */
-/*   Updated: 2021/11/07 12:05:25 by rel-fagr         ###   ########.fr       */
+/*   Updated: 2021/11/14 17:59:41 by rel-fagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_bzero(void *s, size_t n)
 {
 	size_t		i;
-	char	*str;
+	char		*str;
 
 	i = 0;
 	str = (char *) s;
