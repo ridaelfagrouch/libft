@@ -29,14 +29,3 @@ void	*ft_calloc(size_t count, size_t size)
 	}
 	return ((void *) res);
 }
-/*
-int    main(void)
-{
-    int    *ptr;
-	int		i;
-
-    ptr = (int *) ft_calloc(5, 4);
-    for ( i = 0; i < 5; i++)
-        printf("%p\n", ptr++);
-    return 0;
-}*/

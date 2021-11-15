@@ -50,11 +50,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		ft_else(ptr, str, n);
 	return (ptr);
 }
-/*
-int main(void)
-{
-	char	src[] = "hello";
-
-	printf("%s", memmove(src, src + 2, 5));
-	return (0);
-}*/

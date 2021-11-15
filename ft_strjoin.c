@@ -50,11 +50,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str[i] = '\0';
 	return (str);
 }
-/*
-int	main(void)
-{
-	char	s1[] = "hello bro";
-	char	s2[] = "rida";
-
-	printf("%s", ft_strjoin(s1, s2));
-}*/

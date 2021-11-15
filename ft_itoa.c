@@ -75,10 +75,3 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 	return (str);
 }
-
-/*
-int main()
-{
-    int n = 483648;
-    printf("%s", ft_itoa(n));
-}*/

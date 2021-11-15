@@ -60,17 +60,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ptr[i] = '\0';
 	return (ptr);
 }
-/*
-int	main()
-{
-	char ptr[] = "hello bro";
-	char *ptr2;
-
-	ptr2 = ft_substr(ptr,0, 10);
-	for (int i = 0; i < 15; i++)
-	{
-		printf("%x\n", ptr[i]);
-		printf("%x\n", ptr2[i]);
-		printf("*************\n");
-	}
-}*/

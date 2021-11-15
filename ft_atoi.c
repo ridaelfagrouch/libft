@@ -48,10 +48,3 @@ int	ft_atoi(const char *str)
 	}
 	return (sign * k);
 }
-/*
-int main()	
-{
-	char str[] = "-55/421";
-	printf("%d", atoi(str));
-	return (0);
-}*/

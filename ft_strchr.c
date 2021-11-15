@@ -33,8 +33,3 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (0);
 }
-/*int main()
-{
-	char str[] = "";
-	printf("%s", ft_strchr(str, 0));
-}*/
