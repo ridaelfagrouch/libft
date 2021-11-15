@@ -16,7 +16,7 @@ NAME = libft.a
 all : ${NAME}
 
 ${NAME} : ${OFILES} ${INC}
-	@ar -rc ${NAME} ${OFILES}
+	@ar -rcs ${NAME} ${OFILES}
 	@echo "libft.a created"
 
 %.o:%.c
@@ -32,5 +32,5 @@ fclean : clean
 re : fclean all
 
 bonus: all ${OBONUS}
-	@ar -rc ${NAME} ${OBONUS} $(OFILES)
+	@ar -rcs ${NAME} ${OBONUS} $(OFILES)
 	@echo "libft.a bonus created"
