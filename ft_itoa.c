@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	len_itoi(unsigned int n)
+static int	len_itoi(unsigned int n)
 {
 	int	i;
 
@@ -25,7 +25,7 @@ int	len_itoi(unsigned int n)
 	return (i);
 }
 
-char	*check_itoi(int n)
+static char	*check_itoi(int n)
 {
 	char	*str;
 
@@ -36,7 +36,7 @@ char	*check_itoi(int n)
 	return (str);
 }
 
-unsigned int	check_n_sign(int n)
+static unsigned int	check_n_sign(int n)
 {
 	unsigned int	j;
 

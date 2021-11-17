@@ -38,7 +38,7 @@ static char	**ft_creat(char *s, char **result, char c, int row)
 	return (result);
 }
 
-int	str_row(char *tmp, char c)
+static int	str_row(char *tmp, char c)
 {
 	int	count;
 
@@ -66,8 +66,8 @@ char	**ft_split(char const *s, char c)
 	int		count;
 
 	to_tab[0] = c;
-	result = NULL;
 	to_tab[1] = 0;
+	result = NULL;
 	if (!s)
 		return (NULL);
 	tmp = ft_strtrim(s, to_tab);
