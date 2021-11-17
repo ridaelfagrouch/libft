@@ -6,7 +6,7 @@
 /*   By: rel-fagr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 15:02:59 by rel-fagr          #+#    #+#             */
-/*   Updated: 2021/11/11 18:07:14 by rel-fagr         ###   ########.fr       */
+/*   Updated: 2021/11/17 18:27:21 by rel-fagr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*str;
 
 	ptr = NULL;
-	if (!s)
+	if (!s || !f)
 		return (0);
 	i = 0;
 	len = 0;
